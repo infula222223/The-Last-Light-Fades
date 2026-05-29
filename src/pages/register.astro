@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Регистрация.exe">
+  <main class="desktop">
+    <div class="xp-window auth-window">
+      <div class="title-bar">
+        <span>Мастер создания учетной записи</span>
+        <div class="controls">
+          <a href="/" class="clean-link"><button class="win-btn">X</button></a>
+        </div>
+      </div>
+      
+      <div class="window-content">
+        <!-- Боковая синяя панель -->
+        <div class="sidebar">
+          <h2 style="margin-top: 0; font-size: 20px;">Регистрация</h2>
+          <p style="font-size: 14px; line-height: 1.4;">Получите доступ к закрытым материалам и комментариям.</p>
+        </div>
+        
+        <!-- Форма -->
+        <div class="form-area">
+          <h3 style="margin-top: 0;">Создание нового профиля</h3>
+          <p style="font-size: 14px; margin-bottom: 20px;">Пожалуйста, введите ваши данные ниже:</p>
+          
+          <form class="auth-form" onsubmit="event.preventDefault(); alert('Интерфейс готов! База данных будет подключена позже.');">
+            <label>Имя пользователя (Никнейм):</label>
+            <input type="text" class="win-input" placeholder="Например: infa105" required />
+            
+            <label>Электронная почта:</label>
+            <input type="email" class="win-input" placeholder="mail@example.com" required />
+            
+            <label>Пароль:</label>
+            <input type="password" class="win-input" placeholder="********" required />
+            
+            <div class="actions">
+              <button type="submit" class="win-btn">Готово ></button>
+              <a href="/" class="clean-link"><button type="button" class="win-btn">Отмена</button></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .auth-window {
+    width: 550px;
+    margin: 80px auto;
+    /* Убрали фиксированную высоту, теперь окно само подстраивается под контент */
+  }
+  .window-content {
+    display: flex; /* Делаем колонки одинаковой высоты */
+    background: #c0c0c0;
+    padding: 0;
+  }
+  .sidebar {
+    width: 160px;
+    background: #000080; /* Классический темно-синий */
+    color: white;
+    padding: 20px;
+  }
+  .form-area {
+    flex: 1; /* Заполняет всё оставшееся пространство */
+    padding: 20px 25px;
+  }
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .auth-form label {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  .actions {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end; /* Кнопки прижаты вправо */
+    gap: 10px;
+    border-top: 2px groove #ffffff; /* Разделительная полоска в стиле ретро */
+    padding-top: 15px;
+  }
+</style>
