@@ -2,7 +2,7 @@
   "name": "site",
   "version": "1.0.0",
   "scripts": {
-    "build": "astro build",
+    "build": "npx astro build"
     "dev": "astro dev"
   },
   "dependencies": {
